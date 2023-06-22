@@ -39,11 +39,10 @@ class Person:
 
     def __str__(self):
         string = ""
-        string = string + "Your Name Is: " + self.name
+        string = f"{string}Your Name Is: {self.name}"
         string = string + "\n" + "Your Surname Is: " + self.surname
         string = string + "\n" + "Your ID NO. Is: " + self.identity
-        string = string + "\n" + "Your Date Of Birth Is: " + self.dob
-        return string
+        return string + "\n" + "Your Date Of Birth Is: " + self.dob
 
 
 class Student(Person):
@@ -113,7 +112,7 @@ class Examiner(Person):
         print("\n")
         print("Your PhD Examiner details: ")
         print("\n")
-        print("Your Staff Number Is: " + self.staff_no)
+        print(f"Your Staff Number Is: {self.staff_no}")
         print("Your Hourly Rate Is: ", self.hourly_rate)
         print("Your Number Of Hours Is: ", self.no_hours)
         print("Your Salary Is: ", self.tot())
